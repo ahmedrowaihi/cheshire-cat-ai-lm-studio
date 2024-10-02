@@ -15,3 +15,8 @@ services:
     container_name: bridge
     ports:
       - 6000:6000
+    develop:
+      watch:
+        - path: ./bridge.py
+          target: /app/bridge.py
+          action: sync+restart
